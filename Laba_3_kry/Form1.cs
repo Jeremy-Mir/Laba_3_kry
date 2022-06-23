@@ -43,6 +43,16 @@ namespace Laba_3_kry
         public Freq n = new Freq("", 0);
         public void button1_Click(object sender, EventArgs e)
         {
+            string str1 = richTextBox1.Text;
+
+            foreach (char i in str1)
+            {
+                i.ToString();
+                Console.WriteLine((byte)i);
+                string BinaryCode = Convert.ToString(i, 2);
+
+                richTextBox3.Text = richTextBox3.Text + BinaryCode;
+            }
             string str = richTextBox1.Text;
             
 
@@ -153,23 +163,14 @@ namespace Laba_3_kry
                 
                 
             }
-            
 
-            
+            label1.Text = (richTextBox2.Text.Length / 4).ToString();
+            label2.Text = (richTextBox3.Text.Length / 4).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string str = richTextBox1.Text;
            
-            foreach (char i in str)
-            {
-                i.ToString();
-                Console.WriteLine((byte)i);
-                string BinaryCode = Convert.ToString(i, 2);
-
-                richTextBox3.Text = richTextBox3.Text + BinaryCode;
-            }
         }
 
         private void button3_Click(object sender, EventArgs e)
